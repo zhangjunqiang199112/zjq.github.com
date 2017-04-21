@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>彩票</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    window.onload=function(){
+        var arr=[];
+        while(arr.length<6){
+            var rn=getRandom(1,36);
+            if(!findInArray(bl(rn),arr)){
+                arr.push(bl(rn));
+            }
+        }
+        document.write(arr);
+        function getRandom(n,m){
+            return parseInt(Math.random()*(m-n)+n);
+        }
+        function findInArray(n,arr){
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]==n){
+                    return true;
+                }
+            }
+            return false;
+        }
+        function bl(n){
+            return n<10?'0'+n:''+n;
+        }
+    };
+</script>

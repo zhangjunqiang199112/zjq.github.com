@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+    <style>
+        body{
+            font-size:26px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/1.png" alt="">
+    <img src="images/1.png" alt="">
+    <img src="images/1.png" alt="">天
+    <img src="images/1.png" alt="">
+    <img src="images/1.png" alt="">时
+    <img src="images/1.png" alt="">
+    <img src="images/1.png" alt="">分
+    <img src="images/1.png" alt="">
+    <img src="images/1.png" alt="">秒
+</body>
+</html>
+<script>
+    var aImg=document.getElementsByTagName('img');
+    var oDate= new Date();
+    oDate.setFullYear(2017,9,1);
+    oDate.setHours(0,0,0);
+    var oF=oDate.getTime();
+    setInterval(function(){
+        var oN=new Date().getTime();
+        var s=Math.floor((oF-oN)/1000);
+        var day=Math.floor(s/86400);
+        s%=86400;
+        var h=Math.floor(s/3600);
+        s%=3600;
+        var m=Math.floor(s/60);
+        s%=60;
+        var str=bl(day)+bl(h)+bl(m)+bl(s);
+            for(var i=0;i<aImg.length;i++){
+                aImg[i].src="images/"+str.charAt(i)+".png";
+            }
+    },1000);
+    function bl(n){
+        return n<10?'0'+n:''+n;
+    }
+</script>

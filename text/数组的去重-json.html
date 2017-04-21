@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	window.onload=function(){
+		var arr=[1,2,2,4,1,4,3,16,2,2,25,4,2];
+		var arr1=[];
+		var json=[];
+		for(var i=0;i<arr.length;i++){
+			json[arr[i]]="";
+		}
+		for(var name in json){
+			arr1.push(name);
+		}
+		document.write(arr1);
+	};
+</script>

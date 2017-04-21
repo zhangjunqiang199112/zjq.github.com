@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border:1px solid #f00;
+        }
+        .box input.active{
+            background-color: #f00;
+        }
+        .box div{
+            width: 200px;
+            height: 200px;
+            border:1px solid #f00;
+            display: none;
+        }
+        .box div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <a  href="javascript:;" id="left">&lt;</a>
+        <input class="active" type="button" value="按钮1">
+        <input type="button" value="按钮2">
+        <input type="button" value="按钮3">
+        <a href="javascript:;" id="right">&gt;</a>
+        <div class="active">11</div>
+        <div>22</div>
+        <div>33</div>
+    </div>
+</body>
+</html>
+<script>
+    window.onload=function(){
+        var oDiv=document.getElementById('box');
+        var aBtn=oDiv.getElementsByTagName('input');
+        var aDiv=oDiv.getElementsByTagName('div');
+        var oL=document.getElementById('left');
+        var oR=document.getElementById('right');
+        var n=0;
+        var timer;
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].index=i;
+                aBtn[i].onclick=function(){
+                    n=this.index;
+                    tab(n);
+                    clearInterval(timer);
+                }
+            }
+        oL.onclick=function(){
+            if(n==0)
+            n=aBtn.length;
+            n--;
+            tab(n);
+            clearInterval(timer);
+        };
+        oR.onclick=function(){
+            n++;
+            if(n==aBtn.length)
+               n=0 ;
+            tab(n);
+            clearInterval(timer);
+        };
+        timer=setInterval(function(){
+            if(n==0)
+                n=aBtn.length;
+            n--;
+            tab(n);
+        },1000);
+        oDiv.onmouseenter=function(){
+            clearInterval(timer);
+        };
+        oDiv.onmouseleave=function(){
+            timer=setInterval(function(){
+                if(n==0)
+                    n=aBtn.length;
+                n--;
+                tab(n);
+            },1000);
+        };
+        function tab(n){
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].className='';
+                aDiv[i].className='';
+            }
+            aBtn[n].className='active';
+            aDiv[n].className='active';
+        }
+    }
+</script>

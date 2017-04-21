@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字时钟</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border:1px solid #000;
+            margin:0 auto;
+            text-align: center;
+            line-height:200px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+<script>
+    window.onload=function(){
+        var oDiv=document.getElementsByTagName('div')[0];
+        setInterval(Time,1000);
+        function Time(){
+            var oDate=new Date();
+           oDiv.innerHTML=bl(oDate.getFullYear())+'年'+bl(oDate.getMonth()+1)+'月'+bl(oDate.getDate())+'号'+bl(oDate.getHours())+'时'+bl(oDate.getMinutes())+'分'+bl(oDate.getSeconds())+'秒';
+        }
+        Time();
+        console.log(oDiv.innerHTML);
+        function bl(n){
+           return  n<10?'0'+n:''+n;
+        }
+    }
+</script>
