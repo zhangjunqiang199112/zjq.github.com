@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        ul{
+            position: relative;
+            top:0;
+            left:0;
+            width:800px;
+            height:500px;
+            margin:30px auto;
+            border:1px solid #f00;
+            overflow: hidden;
+        }
+        li{
+            width:740px;
+            height:100%;
+            position: absolute;
+            top:0; left:0;
+            overflow: hidden;
+        }
+        li span{
+            position: absolute;
+            top:0; left:0;
+            width:20px;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><span style="background-color:#f0f">1</span><img src="images/18.jpg" alt=""></li>
+        <li><span style="background-color:#00f">2</span><img src="images/23.jpg" alt=""></li>
+        <li><span style="background-color:#ff0">3</span><img src="images/t01b46d8d0c1eb26c6e.jpg" alt=""></li>
+        <li><span style="background-color:skyblue">4</span><img src="images/23.jpg" alt=""></li>
+    </ul>
+</body>
+</html>
+<script>
+    window.onload=function(){
+        var aLi=document.querySelectorAll('li');
+        var aSpan=document.querySelectorAll('span');
+        var sw=aLi[0].children[0].offsetWidth;
+        var lw=aLi[0].offsetWidth;
+        for( var i=0;i<aLi.length;i++){
+            if(i!=0){
+                aLi[i].style.left=lw+sw*(i-1)+'px';
+            }
+        }
+        for( var i=0;i<aSpan.length;i++){
+            (function(index){
+                aSpan[index].onmouseenter=function(){
+                    for( var j=0;j<aSpan.length;j++){
+                        if(j<=index){
+                            aLi[j].style.left=j*sw+'px';
+                        } else{
+                            aLi[j].style.left=lw+sw*(j-1)+'px';
+                        }
+                    }
+                };
+            })(i);
+        }
+    }
+</script>
