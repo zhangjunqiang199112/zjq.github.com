@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: "FangSong"; }
+
+.fl {
+  float: left;
+  display: inline-block; }
+
+.fr {
+  float: right;
+  display: inline-block; }
+
+.clear {
+  zoom: 1; }
+
+.clear:after {
+  clear: both;
+  display: block;
+  content: ""; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.header {
+  height: 63px; }
+  .header ul {
+    margin-left: 580px; }
+    .header ul li {
+      width: 100px;
+      height: 65px;
+      text-align: center;
+      line-height: 65px;
+      margin: 0 40px; }
+      .header ul li a {
+        display: inline-block;
+        width: 100px;
+        height: 65px;
+        font-size: 24px;
+        font-family: "FangSong";
+        color: #ddd; }
+    .header ul li.active {
+      background-color: #f09;
+      border-radius: 4px; }
+
+audio {
+  position: absolute;
+  top: 17px;
+  left: 20%;
+  background-color: #f0f;
+  width: 300px; }
+
+.banner {
+  width: 100%;
+  height: 65px;
+  background: url(../images/13K58PICbp3_1024.jpg) no-repeat;
+  background-size: 100%; }
+
+marquee {
+  font-size: 24px;
+  color: #cdc4d5;
+  text-shadow: 4px 4px 10px #ff5aca; }
+
+.content {
+  width: 100%;
+  height: 573px; }
+  .content div {
+    display: none; }
+  .content div.active {
+    display: block; }
+  .content .home {
+    width: 100%;
+    height: 573px;
+    background: url(../images/timg.jpg) no-repeat;
+    background-size: 100%; }
+    .content .home .bar {
+      width: 100%;
+      height: 573px;
+      margin: 0 auto;
+      position: relative;
+      top: 0;
+      left: 0; }
+      .content .home .bar .down {
+        margin-top: 160px; }
+        .content .home .bar .down p {
+          font-size: 24px;
+          color: #ff28ed;
+          padding: 50px 0;
+          text-align: center;
+          opacity: 0;
+          text-shadow: 4px 4px 10px #a679ff; }
+        .content .home .bar .down p:first-child {
+          animation: move1 3s ease   forwards; }
+        .content .home .bar .down p:nth-child(2) {
+          animation: move2 3s ease 3s  forwards; }
+        .content .home .bar .down p:nth-child(3) {
+          animation: move3 3s ease 6s  forwards; }
+  .content .about-me {
+    width: 100%;
+    height: 573px;
+    background: url(../images/timg2.jpg) no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    opacity: 0.5; }
+    .content .about-me .info {
+      width: 700px;
+      height: 100%;
+      border: 2px dashed #fff; }
+      .content .about-me .info li {
+        line-height: 20px;
+        font-size: 20px;
+        padding: 20px 0;
+        color: #fff;
+        margin-left: 10px; }
+        .content .about-me .info li span {
+          color: #3742ff; }
+        .content .about-me .info li p {
+          text-indent: 2em;
+          letter-spacing: 2px;
+          text-align: left; }
+    .content .about-me .skills {
+      width: 600px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #fff;
+      font-size: 20px;
+      padding-top: 20px;
+      padding-left: 10px;
+      border: 2px dashed #fff; }
+      .content .about-me .skills li {
+        color: #fff;
+        line-height: 20px;
+        padding: 20px 0;
+        font-size: 20px; }
+        .content .about-me .skills li span {
+          display: inline-block;
+          width: 400px;
+          height: 10px;
+          border: 1px solid #fff;
+          border-radius: 4px;
+          margin-left: 10px;
+          position: relative;
+          top: 0;
+          left: 0; }
+          .content .about-me .skills li span strong {
+            display: inline-block;
+            width: 90%;
+            height: 10px;
+            background-color: #f0c;
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 0; }
+    .content .about-me .contact {
+      width: 600px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: #fff;
+      font-size: 20px;
+      border: 2px dashed #fff;
+      border-radius: 2px;
+      padding-left: 10px; }
+      .content .about-me .contact li {
+        font-size: 20px;
+        color: #fff;
+        margin: 20px 0; }
+        .content .about-me .contact li textarea {
+          width: 400px;
+          height: 50px;
+          border: 1px solid #f0f; }
+      .content .about-me .contact li:last-child a {
+        display: inline-block;
+        width: 60px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 4px; }
+      .content .about-me .contact li a:hover {
+        background-color: #f60; }
+    .content .about-me .circle {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .content .about-me .circle li {
+        position: absolute; }
+      .content .about-me .circle li:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #f0f;
+        box-shadow: 0 0 6px 4px pink;
+        opacity: 0.8;
+        animation: circle1 60s ease infinite; }
+  .content .Album {
+    width: 100%;
+    height: 573px;
+    background: url(../images/83025aafa40f4bfb9c14213b024f78f0f636189c.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+    .content .Album .favorite {
+      width: 100px;
+      height: 100px;
+      transform-style: preserve-3d;
+      animation: sport 6s linear 0s infinite normal; }
+      .content .Album .favorite li {
+        list-style: none;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .content .Album .favorite img {
+        width: 100px;
+        height: 100px;
+        border: 5px solid skyblue; }
+    .content .Album .favorite li:first-child {
+      transform: rotateY(60deg) translateZ(100px); }
+    .content .Album .favorite li:nth-child(2) {
+      transform: rotateY(120deg) translateZ(100px); }
+    .content .Album .favorite li:nth-child(3) {
+      transform: rotateY(180deg) translateZ(100px); }
+    .content .Album .favorite li:nth-child(4) {
+      transform: rotateY(240deg) translateZ(100px); }
+    .content .Album .favorite li:nth-child(5) {
+      transform: rotateY(300deg) translateZ(100px); }
+    .content .Album .favorite li:nth-child(6) {
+      transform: rotateY(360deg) translateZ(100px); }
+@keyframes sport {
+  from {
+    transform: rotateX(-10deg) rotateY(0deg); }
+  to {
+    transform: rotateX(-10deg) rotateY(360deg); } }
+    .content .Album .left {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      margin-top: -100px; }
+    .content .Album .right {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      margin-top: -100px; }
+    .content .Album video {
+      width: 600px;
+      height: 400px;
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      margin-left: -300px; }
+    .content .Album .up {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      animation: left 40s linear 0s  infinite; }
+      .content .Album .up li {
+        width: 120px;
+        height: 75px;
+        margin: 0 5px; }
+        .content .Album .up li img {
+          width: 120px;
+          height: 75px; }
+    .content .Album .down {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: -100%;
+      animation: right 40s linear 0s  infinite; }
+      .content .Album .down li {
+        width: 120px;
+        height: 75px;
+        margin: 0 5px; }
+        .content .Album .down li img {
+          width: 120px;
+          height: 75px; }
+  .content .news {
+    width: 100%;
+    height: 571px;
+    background: #000;
+    opacity: 0.5; }
+    .content .news .cloud {
+      width: 100%;
+      height: 571px;
+      background-color: skyblue;
+      animation: change 5s linear 0s infinite alternate;
+      position: relative;
+      overflow: hidden; }
+      .content .news .cloud li {
+        list-style: none;
+        width: 400%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0; }
+    .content .news .cloud li:nth-child(1) {
+      background-image: url("../images/cloud_one.png");
+      animation: one 30s linear 0s infinite alternate; }
+    .content .news ul li:nth-child(2) {
+      background-image: url("../images/cloud_two.png");
+      animation: two 30s linear 0s infinite alternate; }
+    .content .news .cloud li:nth-child(3) {
+      background-image: url("../images/cloud_three.png");
+      animation: three 30s linear 0s infinite alternate; }
+@keyframes change {
+  from {
+    background-color: skyblue; }
+  to {
+    background-color: black; } }
+@keyframes one {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -100%; } }
+@keyframes two {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -200%; } }
+@keyframes three {
+  from {
+    margin-left: 0; }
+  to {
+    margin-left: -300%; } }
+
+/*# sourceMappingURL=personal.css.map */

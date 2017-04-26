@@ -1,0 +1,211 @@
+.flower{
+    width: 50px;
+    height: 50px;
+    /*overflow: hidden;*/
+    opacity:0;
+}
+.flower li{
+    width:25px;
+    height:25px;
+    background-color: #fff;
+    float: left;
+}
+.flower li:first-child{
+    border-radius:0 100% 0 100%;
+    transform-origin: 100% 100%;
+    animation:rotate1 5s linear infinite;
+}
+.flower li:nth-child(2){
+    border-radius:100% 0 100% 0;
+    transform-origin: 0 100%;
+    animation:rotate2 5s linear infinite;
+}
+.flower li:nth-child(3){
+    border-radius:100% 0 100% 0;
+    transform-origin: 100% 0;
+    animation:rotate3 5s linear infinite;
+}
+.flower li:last-child{
+    border-radius:0 100% 0 100%;
+    transform-origin: 0 0;
+    animation:rotate4 5s linear infinite;
+}
+@keyframes rotate1 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg);}
+}
+@keyframes rotate2 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg);}
+}
+@keyframes rotate3 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg);}
+}
+@keyframes rotate4 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg);}
+}
+@keyframes appear1 {
+    0%{opacity:0;left:5%;top:14%;}
+    100%{opacity:1;left:10%;top:60%}
+}
+@keyframes appear2 {
+    0%{opacity:0;top:14%;left:5%;}
+    100%{opacity:1;left:20%;top:60%}
+}
+@keyframes appear3 {
+     0%{opacity:0;top:14%;left:10%;}
+     100%{opacity:1;left:30%;top:70%}
+ }
+@keyframes appear4 {
+    0%{opacity:0;top:15%;left:0;}
+    100%{opacity:1;left:50%;top:70%}
+}
+@keyframes appear5 {
+    0%{opacity:0;top:20%;left:20%;}
+    100%{opacity:1;left:75%;top:65%}
+}
+@keyframes appear6 {
+    0%{opacity:0;top:14%;left:10%;}
+    100%{opacity:1;left:60%;top:50%}
+}
+.item1{
+    position: absolute;
+    top:14%;
+    left:0;
+    animation: appear1 5s linear infinite ;
+}
+.item2{
+    position: absolute;
+    top:14%;
+    left:5%;
+    animation: appear2 5s ease-in infinite ;
+}
+.item3{
+    position: absolute;
+    top:14%;
+    left:10%;
+    animation: appear3 5s ease infinite ;
+}
+.item4{
+    position: absolute;
+    top:15%;left:0;
+    animation: appear4 5s linear infinite ;
+}
+.item5{
+    position: absolute;
+    top:20%;left:20%;
+    animation: appear5 5s ease-out infinite ;
+}
+.item6{
+    position: absolute;
+    top:14%;left:10%;
+    animation: appear6 5s ease-in-out infinite ;
+}
+/*p动画的样式*/
+@keyframes move1 {
+    0%{ opacity:0}
+    100%{opacity:1}
+}
+@keyframes move2 {
+    0%{ opacity:0}
+    100%{opacity:1}
+}
+@keyframes move3 {
+    0%{ opacity:0}
+    100%{opacity:1}
+}
+/*leaves*/
+@keyframes leaves1 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(-360deg);}
+}
+@keyframes leaves2 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg);}
+}
+.leaves{
+    width: 40px;
+    height: 40px;
+    margin:50px auto;
+    animation: leaves1 6s linear infinite;
+}
+.leaves li{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    float: left;
+}
+.leaves li:nth-child(1){
+    border-radius:100% 100% 0 100%;
+}
+.leaves li:nth-child(2){
+    border-radius:100% 100% 100% 0;
+}
+.leaves li:nth-child(3){
+    border-radius:100% 0  100% 100%;
+}
+.leaves li:nth-child(4){
+    border-radius:0 100% 100% 100%;
+}
+.num1{
+    position: absolute;
+    top:14%;
+    right:10%;
+}
+.num2{
+    position: absolute;
+    top:14%;
+    left:10%;
+    animation: leaves2 6s linear infinite;
+}
+/*About me*/
+@keyframes circle1 {
+    0%{top:0;left:0}
+    25%{top:96%;left:50%}
+    50%{top:96%;left:0}
+    75%{top:0;left:50%}
+    100%{top:0;left:0}
+
+}
+.num3{
+    position: absolute;
+    top:-2%;
+    left: 712px;
+}
+.num4{
+    position: absolute;
+    top: 18%;
+    left: 712px;
+}
+.num4 li{
+    background-color:#f0f;
+}
+.num5{
+    position: absolute;
+    top: 38%;
+    left: 712px;
+}
+.num6{
+    position: absolute;
+    top: 58%;
+    left: 712px;
+}
+.num6 li{
+    background-color:#f0f;
+}
+.num7{
+    position: absolute;
+    top: 75%;
+    left: 712px;
+}
+/*up*/
+@keyframes left {
+    0%{top:0;left:-100%}
+    100%{top:0;left:100%}
+}
+@keyframes right {
+    0%{bottom:0;right:-100%}
+    100%{bottom:0;right:100%}
+}

@@ -1,0 +1,422 @@
+*{
+  margin:0;
+  padding:0;
+  list-style: none;
+  text-decoration:none;
+  border:none;
+  box-sizing: border-box;
+  font-family:"FangSong";
+}
+.fl{
+  float: left;
+  display: inline-block;
+}
+.fr{
+  float: right;
+  display: inline-block;
+}
+.clear{
+  zoom:1;
+}
+.clear:after{
+  clear:both;
+  display: block;
+  content:"";
+}
+html,body{
+  width:100%;
+  height:100%;
+}
+//.content{
+//  width:90%;
+//  margin:0 auto;
+//}
+.header{
+  height:63px;
+  ul{
+    //padding:18px 0;
+    margin-left:580px;
+   li{
+     width:100px;
+     height:65px;
+     text-align: center;
+     line-height:65px;
+     margin:0 40px;
+     a{
+       display: inline-block;
+       width:100px;
+       height:65px;
+       font-size:24px;
+       font-family:"FangSong";
+       color:#ddd;
+     }
+   }
+    li.active{
+      background-color:#f09;
+      border-radius:4px;
+    }
+  }
+}
+audio{
+  position: absolute;
+  top:17px;
+  left:20%;
+  background-color: #f0f;
+  width:300px;
+}
+.banner{
+  width:100%;
+  height:65px;
+  background:url(../images/13K58PICbp3_1024.jpg) no-repeat;
+  background-size:100%;
+}
+marquee{
+  font-size:24px;
+  color:#cdc4d5;
+  text-shadow: 4px 4px 10px #ff5aca;
+}
+.content{
+  width:100%;
+  height: 573px;
+  div{
+    display: none;
+  }
+  div.active{
+    display:block;
+  }
+  .home{
+    width:100%;
+    height: 573px;
+    background:url(../images/timg.jpg) no-repeat;
+    background-size:100%;
+    .bar{
+      width: 100%;
+      height: 573px;
+      margin:0 auto;
+      position: relative;
+      top:0;
+      left:0;
+      .down{
+        margin-top:160px;
+        p{
+          font-size:24px;
+          color: #ff28ed;
+          padding:50px 0;
+          text-align: center;
+          opacity: 0;
+          text-shadow: 4px 4px 10px #a679ff;
+          //letter-spacing:2px;
+        }
+        p:first-child{
+          animation: move1 3s ease   forwards;
+        }
+        p:nth-child(2){
+          animation: move2 3s ease 3s  forwards;
+        }
+        p:nth-child(3){
+          animation: move3 3s ease 6s  forwards;
+        }
+      }
+    }
+  }
+  .about-me{
+    width:100%;
+    height: 573px;
+    background:url(../images/timg2.jpg) no-repeat;
+    background-size:100%;
+    position: relative;
+    top:0;
+    left:0;
+    background-color: #ccc;
+    opacity:0.5;
+    .info{
+      width:700px;
+      height:100%;
+      border:2px dashed #fff;
+      li{
+        line-height:20px;
+        font-size:20px;
+        padding:20px 0;
+        color:#fff;
+        margin-left:10px;
+        span{
+          color: #3742ff;
+        }
+        p{
+          text-indent: 2em;
+          letter-spacing: 2px;
+          text-align: left;
+        }
+      }
+    }
+    .skills{
+      width:600px;
+      height:100%;
+      position: absolute;
+      top:0;
+      right:0;
+      color:#fff;
+      font-size:20px;
+      padding-top:20px;
+      padding-left:10px;
+      border:2px dashed #fff;
+      li{
+        color:#fff;
+        line-height:20px;
+        padding:20px 0;
+        font-size:20px;
+        span{
+          display: inline-block;
+          width:400px;
+          height:10px;
+          border:1px solid #fff;
+          border-radius:4px;
+          margin-left:10px;
+          position: relative;
+          top:0;
+          left:0;
+          strong{
+            display: inline-block;
+            width:90%;
+            height:10px;
+            background-color: #f0c;
+            border-radius:4px;
+            position: absolute;
+            top:0;
+            left:0;
+          }
+        }
+      }
+    }
+    .contact{
+      width:600px;
+      position: absolute;
+      bottom:0;
+      right:0;
+      color:#fff;
+      font-size:20px;
+      border:2px dashed #fff;
+      border-radius:2px;
+      padding-left:10px;
+      li{
+        font-size:20px;
+        color:#fff;
+        margin:20px 0;
+        textarea{
+          width:400px;
+          height:50px;
+          border:1px solid #f0f
+        }
+      }
+      li:last-child a{
+        display: inline-block;
+        width: 60px;
+        height: 20px;
+        text-align: center;
+        line-height:20px;
+        color:#fff;
+        border:1px solid #fff;
+        border-radius:4px;
+      }
+      li a:hover{
+        background-color: #f60;
+      }
+    }
+    .circle{
+      width:100%;
+      height:100%;
+      position: absolute;
+      top:0;
+      left:0;
+      li{
+        position: absolute;
+      }
+      li:nth-child(1){
+        top:0;
+        left:0;
+        width: 20px;
+        height: 20px;
+        border-radius:50%;
+        background-color: #f0f;
+        box-shadow:0 0 6px 4px pink;
+        opacity:0.8;
+        animation:circle1 60s ease infinite ;
+      }
+    }
+  }
+  .Album{
+    width:100%;
+    height: 573px;
+    background:url(../images/83025aafa40f4bfb9c14213b024f78f0f636189c.jpg) no-repeat;
+    background-size:cover;
+    position: relative;
+    top:0;
+    left:0;
+    overflow: hidden;
+    .favorite{
+      width: 100px;
+      height: 100px;
+      transform-style: preserve-3d;
+      animation: sport 6s linear 0s infinite normal;
+      li{
+        list-style: none;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+        border: 5px solid skyblue;
+      }
+    }
+    .favorite li:first-child{
+      transform:rotateY(60deg) translateZ(100px);
+    }
+    .favorite  li:nth-child(2){
+      transform:rotateY(120deg) translateZ(100px);
+    }
+    .favorite  li:nth-child(3){
+      transform:rotateY(180deg) translateZ(100px);
+    }
+    .favorite  li:nth-child(4){
+      transform:rotateY(240deg) translateZ(100px);
+    }
+    .favorite  li:nth-child(5){
+      transform:rotateY(300deg) translateZ(100px);
+    }
+    .favorite  li:nth-child(6){
+      transform:rotateY(360deg) translateZ(100px);
+    }
+    @keyframes sport {
+      from{
+        transform: rotateX(-10deg) rotateY(0deg);
+      }
+      to{
+        transform: rotateX(-10deg) rotateY(360deg);
+      }
+    }
+    .left{
+      position: absolute;
+      top:50%;
+      left:10%;
+      margin-top:-100px;
+    }
+    .right{
+      position: absolute;
+      top:50%;
+      right:10%;
+      margin-top:-100px;
+    }
+    video{
+      width:600px;
+      height:400px;
+      position: absolute;
+      top:12%;
+      left:50%;
+      //margin-top:-200px;
+      margin-left:-300px;
+    }
+    .up{
+      width:100%;
+      position: absolute;
+      top:0;
+      left:-100%;
+      animation: left 40s linear 0s  infinite;
+      li{
+        width:120px;
+        height: 75px;
+        margin:0 5px;
+        img{
+          width:120px;
+          height: 75px;
+        }
+      }
+    }
+    .down{
+      width:100%;
+      position: absolute;
+      bottom:0;
+      right:-100%;
+      animation: right 40s linear 0s  infinite;
+      li{
+        width:120px;
+        height: 75px;
+        margin:0 5px;
+        img{
+          width:120px;
+          height: 75px;
+        }
+      }
+    }
+  }
+  .news{
+    width:100%;
+    height: 571px;
+    background:#000;
+    opacity:0.5;
+    .cloud{
+      width:100%;
+      height:571px;
+      background-color: skyblue;
+      //margin-top: 100px;
+      animation: change 5s linear 0s infinite alternate;
+      position: relative;
+      overflow: hidden;
+      li{
+        list-style: none;
+        width: 400%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .cloud li:nth-child(1){
+      background-image: url("../images/cloud_one.png");
+      animation: one 30s linear 0s infinite alternate;
+    }
+    ul li:nth-child(2){
+      background-image: url("../images/cloud_two.png");
+      animation: two 30s linear 0s infinite alternate;
+    }
+    .cloud li:nth-child(3){
+      background-image: url("../images/cloud_three.png");
+      animation: three 30s linear 0s infinite alternate;
+    }
+    @keyframes change {
+      from{
+        background-color: skyblue;
+      }
+      to{
+        background-color: black;
+      }
+    }
+    @keyframes one {
+      from{
+        margin-left: 0;
+      }
+      to{
+        margin-left: -100%;
+      }
+    }
+    @keyframes two {
+      from{
+        margin-left: 0;
+      }
+      to{
+        margin-left: -200%;
+      }
+    }
+    @keyframes three {
+      from{
+        margin-left: 0;
+      }
+      to{
+        margin-left: -300%;
+      }
+    }
+  }
+}
